@@ -12,12 +12,14 @@ const router = express.Router();
 
 // main rout -> http://localhost:3000/api/auth
 
+// signup
 router.post(
   "/register",
   validateBody(schemas.registerSchema),
   controllerWrapper(controller.register),
 );
 
+// sign in
 router.post(
   "/login",
   validateBody(schemas.loginSchema),
